@@ -1,0 +1,191 @@
+<!DOCTYPE html>  
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Ropa Online</title>
+    <link rel="icon" type="image/png" href="c:\Users\Aaron Gzz\Downloads\PAGINA WEB\WhatsApp Image 2025-02-08 at 10.20.30 PM.jpeg"> <!-- Favicon agregado -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            text-align: left;
+        }
+        img {
+            width: 150px;
+            margin: 10px 0;
+            display: block;
+        }
+        h1, p {
+            margin: 5px 0;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        .espacio-grande {
+            margin-bottom: 30px;
+        }
+        .producto {
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+        .formulario {
+            margin-top: 30px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            width: 300px;
+            background-color: #f9f9f9;
+        }
+        .formulario label, .formulario input {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .video-container {
+            margin-top: 30px;
+        }
+        .verde-claro {
+            color: #66ff66;
+        }
+        .buscador {
+            margin-top: 10px;
+            padding: 10px;
+            width: 100%;
+            max-width: 300px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            font-size: 16px;
+        }
+        .boton-buscar {
+            padding: 5px 10px;
+            background-color: #66ff66;
+            border: none;
+            color: white;
+            font-size: 14px;
+            cursor: pointer;
+            margin-top: 15px;
+            margin-bottom: 30px;
+        }
+        .boton-buscar:hover {
+            background-color: #55cc55;
+        }
+        .no-encontrado {
+            color: red;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><span class="verde-claro">Joseo</span>: Tienda de Ropa Online</h1>
+        <p class="espacio-grande">Compra ropa de tus marcas favoritas al mejor precio.</p>
+
+        <!-- Cuadro de búsqueda -->
+        <div>
+            <input type="text" class="buscador" id="buscarRopa" placeholder="Buscar ropa...">
+            <button class="boton-buscar" onclick="buscarRopa()">Buscar</button>
+        </div>
+
+        <!-- Mensaje si no se encuentra el producto -->
+        <p id="mensajeNoEncontrado" class="no-encontrado" style="display: none;">Producto no encontrado.</p>
+
+        <!-- Producto 1 -->
+        <div class="producto" id="producto1"> <!-- Se añadió un ID para identificación -->
+            <p><strong>Playera Polo - $1,022.81</strong></p>
+            <img src="c:\Users\Aaron Gzz\Downloads\PAGINA WEB\Opera Instantánea_2025-02-07_092750_www.grailed.com.png">
+        </div> 
+
+        <div class="producto" id="producto2">
+            <p><strong>Adidas Forum Buckle Low Black - $1,699</strong></p>
+            <img src="c:\Users\Aaron Gzz\Downloads\PAGINA WEB\adidas-Forum-Low-Bad-Bunny-Triple-Black-Product.avif">
+        </div>
+
+        <div class="producto" id="producto3">
+            <p><strong>Nike Sportswear Tech Fleece  - $1,313.60</strong></p>
+            <img src="c:\Users\Aaron Gzz\Downloads\PAGINA WEB\430314469-nike-sportswear-sudadera-con-cremallera-beige-oscuro-negro-offwhite.jpg">
+        </div>
+        
+        <div class="producto" id="producto4">
+            <p><strong>Calcetines Negros Champion - $692,55</strong></p>
+            <img src="c:\Users\Aaron Gzz\Downloads\PAGINA WEB\D_NQ_NP_2X_862358-MLM47623374253_092021-F.webp">
+        </div>
+
+        <div class="producto" id="producto5">
+            <p><strong>Pantalón True Religion Negro - $1,899</strong></p>
+            <img src="c:\Users\Aaron Gzz\Downloads\PAGINA WEB\E0465460-99E2-4113-9902-A5CA3F2A784D_900x.webp">
+        </div>
+
+        <div class="producto" id="producto6">
+            <p><strong>Cinturón Negro De Diamantes Con Cruz - $590.40</strong></p>
+            <img src="c:\Users\Aaron Gzz\Downloads\PAGINA WEB\81B4Wh7CTpL._AC_SX679_.jpg">
+        </div>
+
+        <div class="producto" id="producto7">
+            <p><strong>Calzones Supreme Hanes Boxer Briefs Originales - $1,670</strong></p>
+            <img src="c:\Users\Aaron Gzz\Downloads\PAGINA WEB\D_NQ_NP_2X_660742-MLM54415670244_032023-F.webp">
+        </div>
+
+        <div class="producto" id="producto8">
+            <p><strong>Chaqueta Puma - $3,135</strong></p>
+            <img src="c:\Users\Aaron Gzz\Downloads\PAGINA WEB\D_NQ_NP_766331-MLM74060764193_012024-O.webp">
+        </div>
+
+        <!-- Video de moda -->
+        <div class="video-container">
+            <h2>Últimas Tendencias de Moda</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/T2BOG8d6Pvg" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <!-- Formulario de compra -->
+        <div class="formulario">
+            <h2>Realizar Pedido</h2>
+            <form action="#" method="POST">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="producto">Producto:</label>
+                <input type="text" id="producto" name="producto" required>
+                
+                <label for="direccion">Dirección de Envío:</label>
+                <input type="text" id="direccion" name="direccion" required>
+                
+                <input type="submit" value="Enviar Pedido">
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function buscarRopa() {
+            var busqueda = document.getElementById("buscarRopa").value.toLowerCase();
+            var productos = document.querySelectorAll('.producto');
+            var encontrado = false;
+
+            // Ocultar el mensaje de no encontrado
+            document.getElementById("mensajeNoEncontrado").style.display = 'none';
+
+            // Buscar el producto
+            productos.forEach(function(producto) {
+                var nombreProducto = producto.innerText.toLowerCase();
+
+                // Si el producto contiene el texto buscado
+                if (nombreProducto.includes(busqueda)) {
+                    producto.scrollIntoView({ behavior: "smooth" });
+                    encontrado = true;
+                }
+            });
+
+            // Si no se encontró el producto, mostrar mensaje
+            if (!encontrado) {
+                document.getElementById("mensajeNoEncontrado").style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
